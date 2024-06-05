@@ -1,0 +1,5 @@
+= rust-bitcoin examples
+
+-----
+$ cargo run --example basic_trnx
+-----
