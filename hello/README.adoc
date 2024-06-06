@@ -1,0 +1,2 @@
+$ cargo new hello --vcs none
+$ cargo clippy --fix --bin "hello" --allow-dirty

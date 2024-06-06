@@ -1,0 +1,1 @@
+$ cargo new mylibrary --lib --vcs none
