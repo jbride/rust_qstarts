@@ -1,5 +1,3 @@
-#![warn(rust_2018_idioms)]
-#![allow(elided_lifetimes_in_paths)]
 
 fn gcd(mut n: u64, mut m: u64) -> u64 {
     assert!(n!=0 && m!=0);
@@ -24,6 +22,8 @@ mod tests {
 }
 
 
+use std::str::FromStr;
+use std::env;
 
 // specify a short-cut to the hello_girls function of the 'girls' module
 use crate::girls::hello_girls;
@@ -33,8 +33,19 @@ mod girls;
 
 fn main() {
     println!("Hello, world!");
-    let f_int = 23;
-    let s_int = 54;
+
+    let mut numbers = Vec::new();
+    for arg in env::args().skip(1) {
+        numbers.push(u64::from_str(&arg).expect("error parsing arg"));
+    }
+
+    if numbers.len() == 0 {
+        eprintln!("Usage: gcd NUMBER ....");
+        std::process::exit(1);
+    }
+
+    let f_int = numbers[0];
+    let s_int = numbers[1];
     let gcd_result = gcd(f_int,s_int);
     println!("main gcd_result of {f_int},{s_int} = {gcd_result}");
     hello_girls();
