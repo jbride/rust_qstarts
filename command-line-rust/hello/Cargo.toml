@@ -1,0 +1,12 @@
+[package]
+name = "hello"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[dev-dependencies]
+# Use the assert_cmd crate to find programs in this project's crate directory
+assert_cmd = "2.0.13"
+
+pretty_assertions = "1.4.0"

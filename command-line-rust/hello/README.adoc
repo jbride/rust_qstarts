@@ -1,0 +1,9 @@
+= Hello
+
+-----
+$ cargo run --quiet --bin true; echo $?
+$ cargo run --quiet --bin false; echo $?
+
+# run all tests (that include the substring 'testfunc' in the function name) on a single thread
+$ cargo test testfunc -- --test-threads=1
+-----
