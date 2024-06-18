@@ -2,4 +2,6 @@
 
 === daily challenge
 
-. write a function using short-hand approach that reads content of a file and returns Result<String, std::io::Err>
+. write a function using short-hand approach that reads content of a file and returns Result<String, std::io::Err>.  Use both:
+.. std::fs::File
+.. std::fs
