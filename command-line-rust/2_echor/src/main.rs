@@ -38,10 +38,17 @@ fn main() {
     // Clap will require at least one arg of this Id so it is safe to use unwrap()
     // Need to use cloned() (rather than collect()) since these args are stored on heap
     let _text_args: Vec<String>  = _matches.get_many(TEXT).unwrap().cloned().collect();
-    println!("text count = {}, text = \t{:?}", _text_args.len(), _text_args);
+    println!("text count = {}, text = \t{}", _text_args.len(), _text_args.join(" "));
 
     // Clap will set a default value arg of this Id (if not passed by user), so it is safe to use unwrap()
     // data type of omit_newline is a boolean, so can be copied on stack
-    let _omit_newline_arg: Vec<bool>  = _matches.get_many(OMIT_NEWLINE).unwrap().copied().collect();
-    println!("omit_newline = \t{:?}", _omit_newline_arg);
+    let _omit_newline_arg_vec: Vec<bool>  = _matches.get_many(OMIT_NEWLINE).unwrap().copied().collect();
+    println!("omit_newline_vec = \t{:?}", _omit_newline_arg_vec);
+
+    let _omit_newline_arg_flag: bool = _matches.get_flag(OMIT_NEWLINE);
+    println!("omit_newline = \t{}", _omit_newline_arg_flag);
+
+
+
+
 }

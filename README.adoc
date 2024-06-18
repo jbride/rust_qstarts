@@ -1,0 +1,5 @@
+= rust quick starts
+
+=== daily challenge
+
+. write a function using short-hand approach that reads content of a file and returns Result<String, std::io::Err>
