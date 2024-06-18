@@ -1,0 +1,9 @@
+[package]
+name = "echor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+# https://docs.rs/clap/latest/clap/
+clap = "4.5.7"
