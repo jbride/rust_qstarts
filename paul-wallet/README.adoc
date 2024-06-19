@@ -1,0 +1,3 @@
+= Rust Wallet
+
+* link:https://youtu.be/md-ecvXBGzI[Create Rust Wallet w/ Paul; 2023]

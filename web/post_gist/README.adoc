@@ -1,0 +1,13 @@
+https://rust-lang-nursery.github.io/rust-cookbook/web/clients/apis.html#create-and-delete-gist-with-github-api
+
+-----
+$ cargo new post_gist
+$ cargo add error_chain serde serde_json reqwest tokio tokio-macros
+$ vi Cargo.toml
+
+    reqwest = { version = "0.12.4", features = ["blocking", "json"] }
+    serde = { version = "1.0.203", features = ["derive"] }
+    tokio = { version = "1.38.0", features = ["full"] }
+
+-----
+
